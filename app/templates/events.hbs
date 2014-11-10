@@ -4,7 +4,7 @@
     <ul class="events">
       {{#each event in model}}
         <li>
-          {{#link-to "events.show" event}}{{event.description}}{{/link-to}}
+        {{event.occurredAt}} {{#link-to "events.show" event}}{{event.description}}{{/link-to}}
         </li>
       {{/each}}
     </ul>
