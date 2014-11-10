@@ -1,11 +1,16 @@
-<ul class="events">
-  {{#each event in model}}
+<div class="row">
+  <div class="column">
 
-  <li>
-    {{event.description}}
-  </li>
+    <ul class="events">
+      {{#each event in model}}
+        <li>
+          {{#link-to "events.show" event}}{{event.description}}{{/link-to}}
+        </li>
+      {{/each}}
+    </ul>
 
-  {{/each}}
-</ul>
-
-{{outlet}}
+  </div>
+  <div class="column">
+    {{outlet}}
+  </div>
+</div>
